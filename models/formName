@@ -1,0 +1,35 @@
+wr0 Job Title
+wr1 교육기관명
+wr2 전화번호
+wr3 팩스번호
+wr4 담당자 성함 및 직함
+wr5 휴대폰번호
+wr6 E-mail
+wr7 우편번호
+wr8 주소
+wr9 상세주소
+wr10 참고항목
+wr11 근무 시작일
+wr12 Type
+wr13 근무 시간
+wr14 근무 요일
+wr15 월급
+wr16 초과근무 수당
+wr17 학생 연령층
+wr18 수업 인원 수
+wr19 수업 시수
+wr20 수업 시간
+wr21 채용 강사 수
+wr22 원어민 강사 수
+wr23 숙소 제공
+wr24 항공권 제공
+wr25 의료보험 제공
+wr26 퇴직금 제공
+wr27 National Pension
+wr28 유급 휴가
+wr29 추가요청사항 -> textarea
+wr30 학원 사진 -> file
+wr31 하우징 사진 -> file2
+wr32 개인정보 취급 방침 동의
+wr33 사진1 path
+wr34 사진2 path

@@ -1,0 +1,156 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.om_form1_div {
+  margin: 10px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eaeaea;
+}
+.om_form1_div_tit {
+  padding: 10px 0;
+
+}
+.om_form1_div_tit a {
+  font-size: 3rem;
+}
+
+.om_form1_div_input_row1 {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+.om_form1_div_input_row1 li {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.om_form1_dir_tit {
+  width: 20%;
+}
+.om_form1_dir_tit2 {
+  width: 20%;
+}
+.om_f1dt2_right {
+  text-align: center;
+}
+
+.om_form1_dir_tit_a {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.om_form1_dir_input {
+  width: 80%;
+}
+.om_form1_dir_input2 {
+  width: 30%;
+}
+
+.om_form1_dir_input_input {
+  font-size: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.om_form_juso input {
+  width: 50%;
+  margin: 5px 0;
+  vertical-align: middle;
+  font-size: 2rem;
+}
+
+.om_form1_radio_text {
+  font-size: 2rem;
+}
+
+
+.om_form_submit_div {
+  width: 100%;
+  text-align: center;
+}
+.om_form_submit {
+  padding: 30px 70px!important;
+  font-size: 2rem!important;
+}
+
+
+
+
+.om_adm_list {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.om_adm_list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.om_adm_list table td {
+  text-align: center;
+  border: 1px solid #cccccc;
+  padding: 7px 0;
+}
+.om_adm_list_td1 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.om_adm_list_paging {
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+.om_adm_list_paging a {
+  display: inline-block;
+  padding: 7px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+.om_now_pn {
+  background-color: black;
+  color: white!important;
+}
+
+
+
+.om_bt_dsn {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: black;
+}
+.om_bt_dsn2 {
+  padding: 0 8px;
+  line-height: 2;
+  min-height: 30px;
+  box-shadow: 0 0 0 transparent;
+  border-radius: 4px;
+  border: 1px solid #7e8993;
+  background-color: #fff;
+  color: #32373c;
+  }
+
+.adm_list_bot_bt {
+  text-align: right;
+}
+
+
+
+
+
+
+.om_adm_list_search input, .om_adm_list_search select, .om_adm_list_search button {
+  vertical-align: top;
+  margin-top: 0;
+}
+.om_adm_list_search {
+  text-align: center;
+  margin-top: 50px;
+}
