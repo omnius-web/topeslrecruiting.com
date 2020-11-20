@@ -1,8 +1,0 @@
-.vscode/
-*.code-workspace
-.ftpconfig
-
-.DS_Store
-._.DS_Store
-**/.DS_Store
-**/._.DS_Store
