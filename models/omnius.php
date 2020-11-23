@@ -14,6 +14,27 @@ add_action('init','om_sc_write');
 
 
 
+function om_front_list(){
+    global $wpdb;
+    if(isset($_GET['vn'])){
+      include $_SERVER['DOCUMENT_ROOT'].'/models/adm_view_model.php';
+    }
+    else{
+      include $_SERVER['DOCUMENT_ROOT'].'/models/adm_list_model.php';
+    }
+
+}
+function om_sc_front_list(){
+    add_shortcode('om_front_list','om_front_list');
+}
+add_action('init','om_sc_front_list');
+/*
+여기까지 두번째 숏코드 등록을 위한코드
+*/
+
+
+
+
 
 
 /*
@@ -265,6 +286,56 @@ function func_omnius_adm_up(){
   $wpdb->show_errors();
   $wpdb->update('om_list',$om_post_rst,array('anum'=>$om_post_anum));
   $wpdb->print_error();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+add_action( 'admin_post_nopriv_omnius_adm_del', 'func_omnius_adm_del' );
+add_action( 'admin_post_omnius_adm_del', 'func_omnius_adm_del' );
+
+
+
+function func_omnius_adm_del(){
+  global $wpdb;
+
+  $rst_where['anum'] = $_POST['anum'];
+  $wpdb->show_errors();
+  $wpdb->delete('om_list',$rst_where);
+  $wpdb->print_error();
+
+  /*
+  $om_post_rst = $_POST;
+  $om_post_anum = $_POST['anum'];
+  unset($om_post_rst['anum']);
+  unset($om_post_rst['action']);
+  unset($om_post_rst['omnius_adm_up_field']);
+  unset($om_post_rst['_wp_http_referer']);
+  if($movefile[0]['error'] == ''){
+    $om_post_rst['wr30'] = $movefile[0]['url'];
+    wp_delete_file( $om_post_rst['wr33'] );
+    $om_post_rst['wr33'] = $movefile[0]['file'];
+  }
+  if($movefile[1]['error'] == ''){
+    $om_post_rst['wr31'] = $movefile[1]['url'];
+    wp_delete_file( $om_post_rst['wr34'] );
+    $om_post_rst['wr34'] = $movefile[1]['file'];
+  }
+  $wpdb->show_errors();
+  $wpdb->update('om_list',$om_post_rst,array('anum'=>$om_post_anum));
+  $wpdb->print_error();
+  */
 }
 
 

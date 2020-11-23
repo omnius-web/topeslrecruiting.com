@@ -68,6 +68,12 @@ $om_adm_list = $wpdb->get_results(
 // foreach ($om_adm_list as $key) {
 //   $rst .= "content is {$key->wr1}<br>";
 // }
+// echo $_SERVER['PHP_SELF'];
+if($_SERVER['PHP_SELF'] == '/wp-admin/admin.php'){
+  include $_SERVER['DOCUMENT_ROOT'].'/models/adm_list.php';
+}
+else{
+  include $_SERVER['DOCUMENT_ROOT'].'/models/front_list.php';
+}
 
-include $_SERVER['DOCUMENT_ROOT'].'/models/adm_list.php';
 ?>

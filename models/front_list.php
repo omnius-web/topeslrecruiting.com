@@ -3,7 +3,7 @@
 
 
 <div class="om_adm_list_search">
-  <form class="om_adm_search_form" action="/wp-admin/admin.php?page=custom_menu" method="post">
+  <form class="om_adm_search_form" action="/job-board/korea-job-board/" method="post">
 
     <input type="hidden" name="check" value="1">
     <select class="" name="sel1">
@@ -58,34 +58,24 @@ function omListFormReset(){
       <td class="om_adm_list_td1">Start Date</td>
       <td class="om_adm_list_td1">Type</td>
       <td class="om_adm_list_td1">Status</td>
-      <td class="om_adm_list_td1">Del</td>
     </tr>
     <?php foreach ($om_adm_list as $oal_key) { ?>
       <tr>
         <td><?php echo $om_list_num; ?></td>
-        <td><a href="/wp-admin/admin.php?page=custom_menu&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr0; ?></a></td>
-        <td><a href="/wp-admin/admin.php?page=custom_menu&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr1; ?></a></td>
+        <td><a href="/job-board/korea-job-board?vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr0; ?></a></td>
+        <td><a href="/job-board/korea-job-board?vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr1; ?></a></td>
         <td><?php echo $oal_key->wr8; ?></td>
         <td><?php echo $oal_key->wr11; ?></td>
         <td><?php echo $oal_key->wr12; ?></td>
         <td></td>
-        <td>
-          <form class="" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ) ?>" method="post">
-            <input type="hidden" name="anum" value="<?php echo $oal_key->anum; ?>">
-            <input type="hidden" name="action" value="omnius_adm_del"><?php
-            wp_nonce_field( 'omnius_adm_del', 'omnius_adm_del_field' )
-            ?>
-            <button>delete</button>
-          </form>
 
-        </td>
       </tr>
       <?php $om_list_num = $om_list_num-1; ?>
     <?php } ?>
   </table>
   <div class="om_adm_list_paging">
     <?php if($om_page_block!==1){ ?>
-    <a href="/wp-admin/admin.php?page=custom_menu&pn=<?php echo $om_page_block*10-19; ?>">prev</a>
+    <a href="/job-board/korea-job-board?pn=<?php echo $om_page_block*10-19; ?>">prev</a>
     <?php } ?>
     <?php
     for($oalp = $om_page_block_startnum; $oalp <= $om_page_block_endnum; $oalp++){
@@ -96,15 +86,13 @@ function omListFormReset(){
       $om_now_pn_class = 'om_now_pn';
     }
     ?>
-    <a href="/wp-admin/admin.php?page=custom_menu&pn=<?php echo $oalp; ?>" class="<?php echo $om_now_pn_class; ?>"><?php echo $oalp; ?></a>
+    <a href="/job-board/korea-job-board?pn=<?php echo $oalp; ?>" class="<?php echo $om_now_pn_class; ?>"><?php echo $oalp; ?></a>
     <?php } ?>
     <?php if($om_page_block_endnum == $om_page_block_startnum+9){ ?>
-      <a href="/wp-admin/admin.php?page=custom_menu&pn=<?php echo $om_page_block_endnum+1; ?>">next</a>
+      <a href="/job-board/korea-job-board?pn=<?php echo $om_page_block_endnum+1; ?>">next</a>
     <?php } ?>
 
   </div>
 
-  <div class="adm_list_bot_bt">
-    <a href="/wp-admin/admin.php?page=custom_menu&bo=wr" class="om_bt_dsn">write</a>
-  </div>
+  
 </div>

@@ -47,6 +47,15 @@ $om_adm_list = $wpdb->get_results(
 //   $rst .= "content is {$key->wr1}<br>";
 // }
 */
-include $_SERVER['DOCUMENT_ROOT'].'/models/adm_view.php';
+
+
+if($_SERVER['PHP_SELF'] == '/wp-admin/admin.php'){
+  include $_SERVER['DOCUMENT_ROOT'].'/models/adm_view.php';
+}
+else{
+  include $_SERVER['DOCUMENT_ROOT'].'/models/front_view.php';
+}
+
+
 
 ?>
