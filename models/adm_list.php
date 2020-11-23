@@ -3,35 +3,49 @@
 
 
 <div class="om_adm_list_search">
-  <select class="" name="">
-    <option value="">선택</option>
-    <option value="">제목</option>
-    <option value="">학원명</option>
-  </select>
-  <input type="text" name="" value="" placeholder="검색어">
-  <select class="" name="">
-    <option value="">선택</option>
-    <option value="">등록일</option>
-    <option value="">근무 시작일</option>
-  </select>
-  <select class="" name="">
-    <?php for ($i_y=2020; $i_y < 2100; $i_y++) { ?>
-      <option value=""><?php echo $i_y; ?></option>
-    <?php } ?>
-  </select>
-  <select class="" name="">
-    <?php for ($i_m=1; $i_m < 13; $i_m++) { ?>
-      <option value=""><?php echo $i_m; ?></option>
-    <?php } ?>
-  </select>
-  <select class="" name="">
-    <?php for ($i_d=1; $i_d < 32; $i_d++) { ?>
-      <option value=""><?php echo $i_d; ?></option>
-    <?php } ?>
+  <form class="om_adm_search_form" action="/wp-admin/admin.php?page=custom_menu" method="post">
 
-  </select>
-  <button type="submit" class="om_bt_dsn2">검색</button>
+    <input type="hidden" name="check" value="1">
+    <select class="" name="sel1">
+      <option value="">선택</option>
+      <option value="wr0" <?php if($_POST['sel1']=='wr0'){echo 'selected="selected"';} ?>>제목</option>
+      <option value="wr1" <?php if($_POST['sel1']=='wr1'){echo 'selected="selected"';} ?>>학원명</option>
+    </select>
+    <input type="text" name="sel2" value="<?php echo $_POST['sel2']; ?>" placeholder="검색어" id="om_adm_sel2">
+    <select class="" name="sel3">
+      <option value="">선택</option>
+      <option value="indate" <?php if($_POST['sel3']=='indate'){echo 'selected="selected"';} ?>>등록일</option>
+      <option value="wr11" <?php if($_POST['sel3']=='wr11'){echo 'selected="selected"';} ?>>근무 시작일</option>
+    </select>
+    <select class="" name="sel4">
+      <?php for ($i_y=2020; $i_y < 2100; $i_y++) { ?>
+        <option value="<?php echo $i_y; ?>" <?php if($_POST['sel4']==$i_y){echo 'selected="selected"';} ?>><?php echo $i_y; ?></option>
+      <?php } ?>
+    </select>
+    <select class="" name="sel5">
+      <?php for ($i_m=1; $i_m < 13; $i_m++) { ?>
+        <option value="<?php echo $i_m; ?>" <?php if($_POST['sel5']==$i_m){echo 'selected="selected"';} ?>><?php echo $i_m; ?></option>
+      <?php } ?>
+    </select>
+    <select class="" name="sel6" id="om_adm_select">
+      <?php for ($i_d=1; $i_d < 32; $i_d++) { ?>
+        <option value="<?php echo $i_d; ?>" <?php if($_POST['sel6']==$i_d){echo 'selected="selected"';} ?>><?php echo $i_d; ?></option>
+      <?php } ?>
+
+    </select>
+    <button type="submit" class="om_bt_dsn2">검색</button>
+    <button type="button" class="om_bt_dsn2" onclick="omListFormReset();">초기화</button>
+  </form>
 </div>
+
+<script type="text/javascript">
+function omListFormReset(){
+  document.getElementById('om_adm_sel2').value = '';
+  // document.getElementById('om_adm_select').options[0].setAttribute('selected','selected');
+  // document.getElementById('om_adm_select').options[0].setAttribute('value','1000000');
+  document.getElementById('om_adm_select').options[0].selected=true;
+}
+</script>
 
 
 <div class="om_adm_list">
