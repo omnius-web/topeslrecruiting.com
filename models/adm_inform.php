@@ -2,6 +2,15 @@
 html {
   font-size: 9px!important;
 }
+input[type=checkbox], input[type=radio] {
+  width: 2rem!important;
+  height: 2rem!important;
+}
+input[type=radio]:checked::before {
+  width: 1.8rem!important;
+  height: 1.8rem!important;
+  margin: 0rem!important;
+}
 </style>
 
 <link rel="stylesheet" href="https://topeslrecruiting.com/models/om_write.css?v=<?php echo mt_rand(1,100000); ?>">
@@ -41,6 +50,24 @@ $(function(){
       </li>
     </div>
     <!-- form 1 row -->
+
+    <!-- form 2 row -->
+    <div class="om_form1_div_input_row1">
+      <li class="om_form1_dir_tit2">
+        <a class="om_form1_dir_tit_a">Status</a>
+      </li>
+      <li class="om_form1_dir_input2 om_form1_radio_text">
+        <input type="radio" name="wr35" value="Available" class="om_form1_dir_input_input2">Available
+        <input type="radio" name="wr35" value="Not Available" class="om_form1_dir_input_input2">Not Available
+      </li>
+      <li class="om_form1_dir_tit2 om_f1dt2_right">
+        <a class="om_form1_dir_tit_a">Job Number</a>
+      </li>
+      <li class="om_form1_dir_input2">
+        <input type="text" name="wr37" value="" class="om_form1_dir_input_input">
+      </li>
+    </div>
+    <!-- form 2 row -->
 
     <!-- form 1 row -->
     <div class="om_form1_div_input_row1">
@@ -399,6 +426,18 @@ $(function(){
       </li>
       <li class="om_form1_dir_input om_form1_radio_text">
         <input type="file" name="file2" value="" class="">
+      </li>
+    </div>
+    <!-- form 1 row -->
+
+
+    <!-- form 1 row -->
+    <div class="om_form1_div_input_row1">
+      <li class="om_form1_dir_tit">
+        <a class="om_form1_dir_tit_a">Note</a>
+      </li>
+      <li class="om_form1_dir_input om_form1_radio_text">
+        <textarea name="wr36" style="width: 100%; height: 100px;"></textarea>
       </li>
     </div>
     <!-- form 1 row -->

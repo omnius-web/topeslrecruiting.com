@@ -53,7 +53,6 @@ function omListFormReset(){
     <tr>
       <td class="om_adm_list_td1">No</td>
       <td class="om_adm_list_td1">Job Title</td>
-      <td class="om_adm_list_td1">Name</td>
       <td class="om_adm_list_td1">Location</td>
       <td class="om_adm_list_td1">Start Date</td>
       <td class="om_adm_list_td1">Type</td>
@@ -63,11 +62,11 @@ function omListFormReset(){
       <tr>
         <td><?php echo $om_list_num; ?></td>
         <td><a href="/job-board/korea-job-board?vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr0; ?></a></td>
-        <td><a href="/job-board/korea-job-board?vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr1; ?></a></td>
+
         <td><?php echo $oal_key->wr8; ?></td>
         <td><?php echo $oal_key->wr11; ?></td>
         <td><?php echo $oal_key->wr12; ?></td>
-        <td></td>
+        <td><?php echo $oal_key->wr35; ?></td>
 
       </tr>
       <?php $om_list_num = $om_list_num-1; ?>
@@ -94,5 +93,5 @@ function omListFormReset(){
 
   </div>
 
-  
+
 </div>

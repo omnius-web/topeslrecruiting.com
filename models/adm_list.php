@@ -52,6 +52,7 @@ function omListFormReset(){
   <table>
     <tr>
       <td class="om_adm_list_td1">No</td>
+      <td class="om_adm_list_td1">Job Number</td>
       <td class="om_adm_list_td1">Job Title</td>
       <td class="om_adm_list_td1">Name</td>
       <td class="om_adm_list_td1">Location</td>
@@ -63,12 +64,13 @@ function omListFormReset(){
     <?php foreach ($om_adm_list as $oal_key) { ?>
       <tr>
         <td><?php echo $om_list_num; ?></td>
+        <td><?php echo $oal_key->wr37; ?></td>
         <td><a href="/wp-admin/admin.php?page=custom_menu&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr0; ?></a></td>
         <td><a href="/wp-admin/admin.php?page=custom_menu&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr1; ?></a></td>
         <td><?php echo $oal_key->wr8; ?></td>
         <td><?php echo $oal_key->wr11; ?></td>
         <td><?php echo $oal_key->wr12; ?></td>
-        <td></td>
+        <td><?php echo $oal_key->wr35; ?></td>
         <td>
           <form class="" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ) ?>" method="post">
             <input type="hidden" name="anum" value="<?php echo $oal_key->anum; ?>">

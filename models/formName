@@ -33,3 +33,6 @@ wr31 하우징 사진 -> file2
 wr32 개인정보 취급 방침 동의
 wr33 사진1 path
 wr34 사진2 path
+wr35 status
+wr36 Note
+wr37 job Number
