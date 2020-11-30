@@ -3,7 +3,7 @@
 
 
 <div class="om_adm_list_search">
-  <form class="om_adm_search_form" action="/job-board/korea-job-board/" method="post">
+  <form class="om_adm_search_form" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
 
     <input type="hidden" name="check" value="1">
     <select class="" name="sel1">
@@ -33,6 +33,24 @@
       <?php } ?>
 
     </select>
+    <select class="" name="sel7" id="om_adm_select2">
+      <?php
+      $om_city = array(
+        'Seoul', 'Incheon', 'Busan', 'Daegu', 'Gwangju', 'Daejeon', 'Ulsan', 'Gyeonggi-do', 'Gangwon-do', 'Chungcheongnam-do', 'Chungcheongbuk-do', 'Jeollanam-do', 'Jeollabuk-do', 'Gyeongsangnam-do', 'Gyeongsangbuk-do', 'Jeju-do'
+      );
+      $omc_html = "<option value=''>Location</option>";
+      foreach ($om_city as $omc_key => $omc_value) {
+        $om_sel7_select = '';
+        if($_POST['sel7']==$omc_value){
+          $om_sel7_select = 'selected="selected"';
+        }
+        $omc_html .= "
+          <option value='{$omc_value}' {$om_sel7_select}>{$omc_value}</option>
+        ";
+      }
+      echo $omc_html;
+      ?>
+    </select>
     <button type="submit" class="om_bt_dsn2">검색</button>
     <button type="button" class="om_bt_dsn2" onclick="omListFormReset();">초기화</button>
   </form>
@@ -44,19 +62,20 @@ function omListFormReset(){
   // document.getElementById('om_adm_select').options[0].setAttribute('selected','selected');
   // document.getElementById('om_adm_select').options[0].setAttribute('value','1000000');
   document.getElementById('om_adm_select').options[0].selected=true;
+  document.getElementById('om_adm_select2').options[0].selected=true;
 }
 </script>
 
 
-<div class="om_adm_list">
+<div class="om_adm_list om_front_list">
   <table>
     <tr>
-      <td class="om_adm_list_td1">No</td>
-      <td class="om_adm_list_td1">Job Title</td>
-      <td class="om_adm_list_td1">Location</td>
-      <td class="om_adm_list_td1">Start Date</td>
-      <td class="om_adm_list_td1">Type</td>
-      <td class="om_adm_list_td1">Status</td>
+      <th>No</th>
+      <th>Job Title</th>
+      <th>Location</th>
+      <th>Start Date</th>
+      <th>Type</th>
+      <th>Status</th>
     </tr>
     <?php foreach ($om_adm_list as $oal_key) { ?>
       <tr>

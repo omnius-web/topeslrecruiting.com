@@ -70,7 +70,7 @@ $om_set_num = 0; // DB limit 시작번호
 $om_page_block = 1; // PAGE BLOCK
 $om_page_block_startnum = 1;
 $om_adm_list_count = $wpdb->get_var(
-  "SELECT COUNT(*) FROM om_list {$om_where}"
+  "SELECT COUNT(*) FROM om_apply {$om_where}"
 );
 $om_all_page = ceil((int)$om_adm_list_count/$om_onepage_list_num);//All page
 if(!isset($_GET['pn'])){
@@ -95,7 +95,7 @@ if(isset($_GET['pn'])){
 
 $om_adm_list = $wpdb->get_results(
   $wpdb->prepare(
-    "select * from om_list {$om_where} order by anum desc limit {$om_set_num}, {$om_onepage_list_num}"
+    "select * from om_apply {$om_where} order by anum desc limit {$om_set_num}, {$om_onepage_list_num}"
   ),OBJECT
 );
 // foreach ($om_adm_list as $key) {
@@ -103,7 +103,7 @@ $om_adm_list = $wpdb->get_results(
 // }
 // echo $_SERVER['PHP_SELF'];
 if($_SERVER['PHP_SELF'] == '/wp-admin/admin.php'){
-  include $_SERVER['DOCUMENT_ROOT'].'/models/adm_list.php';
+  include $_SERVER['DOCUMENT_ROOT'].'/models/adm_list2.php';
 }
 else{
   include $_SERVER['DOCUMENT_ROOT'].'/models/front_list.php';

@@ -36,3 +36,48 @@ wr34 사진2 path
 wr35 status
 wr36 Note
 wr37 job Number
+
+
+
+
+
+
+
+<= apply field name =>
+
+wr1 First Name
+wr2 Last Name
+wr3 Nationality
+wr4 Current Location
+wr5 Date of Birth
+wr6 Gender
+wr7 Phone
+wr8 Email
+wr9 Skype ID
+wr10 Available Start Date
+wr11 Bachelor's Degree - School Name
+wr12 Bachelor's Degree - Major
+wr13 Bachelor's Degree - Completion Complete/ In Progress
+wr14 Master's Degree - School Name
+wr15 Master's Degree - Major
+wr16 Master's Degree - Completion Complete/ In Progress
+wr17 Do you have any certificates (e.g. TEFL, TESOL, CELTA)?
+wr18 If yes, what is the certificate?
+wr19 Do you have your passport?
+wr20 Teaching experience in Korea or abroad before?
+wr21 Do you have any medical problems that employer should know?
+wr22 Have you ever been convicted of a criminal offence?
+wr23 Current visa type
+wr24 1st Desire
+wr25 2nd Desire
+wr26 Preferred student age
+wr27 Preferred working hours
+wr28 Housing Type
+wr29 Expected Salary
+wr30 file1 url
+wr31 file1 path
+wr32 file2 url
+wr33 file2 path
+indate datetime
+
+<= apply field name =>

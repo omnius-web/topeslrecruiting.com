@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://topeslrecruiting.com/models/om_write.css?v=<?php echo mt_rand(1,100000); ?>">
 
 
-
+<?php /*
 <div class="om_adm_list_search">
   <form class="om_adm_search_form" action="/wp-admin/admin.php?page=custom_menu" method="post">
 
@@ -37,6 +37,8 @@
     <button type="button" class="om_bt_dsn" onclick="omListFormReset();">초기화</button>
   </form>
 </div>
+*/
+?>
 
 <script type="text/javascript">
 function omListFormReset(){
@@ -52,24 +54,27 @@ function omListFormReset(){
   <table>
     <tr>
       <td class="om_adm_list_td1">No</td>
-      <td class="om_adm_list_td1">Job Number</td>
-      <td class="om_adm_list_td1">Job Title</td>
-      <td class="om_adm_list_td1">Name</td>
-      <td class="om_adm_list_td1">Location</td>
-      <td class="om_adm_list_td1">Start Date</td>
-      <td class="om_adm_list_td1">Type</td>
+      <td class="om_adm_list_td1">First Name</td>
+      <td class="om_adm_list_td1">Last Name</td>
+      <td class="om_adm_list_td1">Nationality</td>
+      <td class="om_adm_list_td1">Phone</td>
+      <td class="om_adm_list_td1">Email</td>
+      <td class="om_adm_list_td1">Date</td>
+      <?php /*
       <td class="om_adm_list_td1">Status</td>
       <td class="om_adm_list_td1">Del</td>
+      */ ?>
     </tr>
     <?php foreach ($om_adm_list as $oal_key) { ?>
       <tr>
         <td><?php echo $om_list_num; ?></td>
-        <td><?php echo $oal_key->wr37; ?></td>
-        <td><a href="/wp-admin/admin.php?page=custom_menu&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr0; ?></a></td>
-        <td><a href="/wp-admin/admin.php?page=custom_menu&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr1; ?></a></td>
+        <td><a href="/wp-admin/admin.php?page=custom_menu2&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr1; ?></a></td>
+        <td><a href="/wp-admin/admin.php?page=custom_menu2&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr2; ?></a></td>
+        <td><a href="/wp-admin/admin.php?page=custom_menu2&vn=<?php echo $oal_key->anum; ?>"><?php echo $oal_key->wr3; ?></a></td>
+        <td><?php echo $oal_key->wr7; ?></td>
         <td><?php echo $oal_key->wr8; ?></td>
-        <td><?php echo $oal_key->wr11; ?></td>
-        <td><?php echo $oal_key->wr12; ?></td>
+        <td><?php echo date("Y-m-d h:i:s", $oal_key->indate); ?></td>
+        <?php /*
         <td><?php echo $oal_key->wr35; ?></td>
         <td>
           <form class="" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ) ?>" method="post">
@@ -81,13 +86,14 @@ function omListFormReset(){
           </form>
 
         </td>
+        */ ?>
       </tr>
       <?php $om_list_num = $om_list_num-1; ?>
     <?php } ?>
   </table>
   <div class="om_adm_list_paging">
     <?php if($om_page_block!==1){ ?>
-    <a href="/wp-admin/admin.php?page=custom_menu&pn=<?php echo $om_page_block*10-19; ?>">prev</a>
+    <a href="/wp-admin/admin.php?page=custom_menu2&pn=<?php echo $om_page_block*10-19; ?>">prev</a>
     <?php } ?>
     <?php
     for($oalp = $om_page_block_startnum; $oalp <= $om_page_block_endnum; $oalp++){
@@ -98,15 +104,16 @@ function omListFormReset(){
       $om_now_pn_class = 'om_now_pn';
     }
     ?>
-    <a href="/wp-admin/admin.php?page=custom_menu&pn=<?php echo $oalp; ?>" class="<?php echo $om_now_pn_class; ?>"><?php echo $oalp; ?></a>
+    <a href="/wp-admin/admin.php?page=custom_menu2&pn=<?php echo $oalp; ?>" class="<?php echo $om_now_pn_class; ?>"><?php echo $oalp; ?></a>
     <?php } ?>
     <?php if($om_page_block_endnum == $om_page_block_startnum+9){ ?>
-      <a href="/wp-admin/admin.php?page=custom_menu&pn=<?php echo $om_page_block_endnum+1; ?>">next</a>
+      <a href="/wp-admin/admin.php?page=custom_menu2&pn=<?php echo $om_page_block_endnum+1; ?>">next</a>
     <?php } ?>
 
   </div>
-
+  <?php /*
   <div class="adm_list_bot_bt">
     <a href="/wp-admin/admin.php?page=custom_menu&bo=wr" class="om_bt_dsn">write</a>
   </div>
+  */ ?>
 </div>

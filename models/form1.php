@@ -386,6 +386,8 @@ $(function(){
     </div>
     <!-- form 1 row -->
 
+
+<?php /*
     <!-- form 1 row -->
     <div class="om_form1_div_input_row1">
       <li class="om_form1_dir_tit">
@@ -402,7 +404,7 @@ $(function(){
       </li>
     </div>
     <!-- form 1 row -->
-
+*/ ?>
 
 
 
